@@ -23,7 +23,6 @@ a.out
 
 # configure 脚本生成的文件
 config.h
-config.h.in
 config.log
 
 # 常见的构建目录
