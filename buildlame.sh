@@ -19,3 +19,18 @@ emconfigure ./configure \
 # 编译 & 安装
 emmake make -j$(sysctl -n hw.logicalcpu)
 emmake make install
+
+#创建 pc 文件供 pkg-config 使用
+mkdir -p $1/lib/pkg-config/
+cat > $1/lib/pkgconfig/libmp3lame.pc <<EOF
+prefix=$1
+exec_prefix=\${prefix}
+libdir=\${exec_prefix}/lib
+includedir=\${prefix}/include
+
+Name: LAME
+Description: MP3 encoding library
+Version: 3.100
+Libs: -L\${libdir} -lmp3lame
+Cflags: -I\${includedir}
+EOF
