@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+# 目标文件
+*.o
+*.obj
+*.lo
+
+# 静态库
+*.a
+*.lib
+*.la
+
+# 共享库
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# 可执行文件
+*.exe
+*.out
+a.out
+
+# configure 脚本生成的文件
+config.h
+config.h.in
+config.log
+
+# 常见的构建目录
+build/
+Build/
+BUILD/
+debug/
+Debug/
